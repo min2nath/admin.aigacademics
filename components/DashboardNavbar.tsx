@@ -72,7 +72,7 @@ export default function DashboardNavbar() {
 
           <nav className="hidden md:flex space-x-6 ml-[100px]">
             <button
-              onClick={() => router.push('/home')}
+              onClick={() => router.push('/events')}
               className={clsx(
                 'font-medium relative pb-1',
                 isActive('/home') &&

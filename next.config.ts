@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: 'res.cloudinary.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'aig-academics.s3.ap-southeast-1.amazonaws.com',
+        pathname: '/**',
+      },
     ],
   },
   webpack(config) {

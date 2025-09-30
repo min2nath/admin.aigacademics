@@ -15,7 +15,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import { useAuthStore } from '@/stores/authStore'
 import { Eye, EyeOff } from 'lucide-react'
 
-const SITE_KEY = '6Le_stcrAAAAAOQmRriP-ULtDHz6t-xXQs-SLNBJ'
+const SITE_KEY = '6LfKidkrAAAAALz6FOqqz-8KS6-BWZbBu7n0w0LW'
 
 export function LoginForm() {
   const router = useRouter()

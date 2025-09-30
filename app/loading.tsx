@@ -2,12 +2,12 @@
 import { useEffect, useState } from "react"
 
 const colors = [
-  "bg-sky-400",
-  "bg-sky-500",
-  "bg-sky-600",
-  "bg-sky-700",
-  "bg-sky-800",
-  "bg-sky-900",
+  "border-sky-400",
+  "border-sky-500",
+  "border-sky-600",
+  "border-sky-700",
+  "border-sky-800",
+  "border-sky-900",
 ]
 
 export default function Loading() {
@@ -23,11 +23,15 @@ export default function Loading() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-white">
-      <div
-        className={`flex items-center justify-center w-40 h-40 rounded-full animate-spin ${colors[colorIndex]}`}
-      >
-        <span className="text-white font-bold text-center text-lg">
-          AIG Hospitals
+      <div className="relative w-40 h-40 flex items-center justify-center bg-white rounded-full">
+        {/* Spinning Loader Circle */}
+        <div
+          className={`absolute w-full h-full rounded-full border-4 border-t-4 border-t-transparent animate-spin ${colors[colorIndex]}`}
+        ></div>
+
+        {/* Fixed Center Text */}
+        <span className="text-sky-800 font-bold text-center text-lg z-10">
+          AIG Academics
         </span>
       </div>
     </div>

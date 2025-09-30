@@ -1,3 +1,4 @@
+
 // components/Sidebar.tsx
 "use client";
 
@@ -80,22 +81,23 @@ function SidebarComponent() {
       className="min-h-screen bg-sky-50 p-2 flex flex-col relative dark:bg-background dark:text-foreground border-r overflow-hidden"
     >
       {!isMobile && (
-        <div className="relative mb-4">
-          <button
-            onClick={() => setCollapsed(!collapsed)}
-            className={`absolute top-1/2 -translate-y-1/4 rounded-full p-1 
-              bg-sky-100 dark:bg-gray-300
-              transition-all duration-300 ease-in-out
-              ${collapsed ? "left-2" : "-right-5"}`}
-          >
-            {collapsed ? (
-              <ChevronRightIcon className="w-5 h-5 transition-transform duration-300" />
-            ) : (
-              <ChevronLeftIcon className="w-5 h-5 transition-transform duration-300" />
-            )}
-          </button>
-        </div>
+  <div className="relative mb-4">
+    <button
+      onClick={() => setCollapsed(!collapsed)}
+      className={`absolute top-1/4 -translate-y-1/2 pr-2 mt-2
+        transition-all duration-300 ease-in-out
+        ${collapsed ? "left-3" : "-right-5"}`}
+      title={collapsed ? "Expand" : "Collapse"} // Tooltip on hover
+    >
+      {collapsed ? (
+        <ChevronRightIcon className="w-5 h-6 transition-transform duration-300" />
+      ) : (
+        <ChevronLeftIcon className="w-5 h-6 transition-transform duration-300" />
       )}
+    </button>
+  </div>
+)}
+
 
       {isMobile && (
         <Link

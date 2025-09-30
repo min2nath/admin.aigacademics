@@ -94,7 +94,7 @@ export default function AnnouncementCard({
   return (
     <Card className="p-4 mb-4 shadow-sm">
       <div className="flex justify-between items-start">
-        <div className="text-sm text-gray-500 flex items-center gap-1 mb-2">
+        <div className="text-sm flex items-center gap-1 mb-2">
           <Calendar size={16} /> {new Date(data.updatedAt).toLocaleString()}
         </div>
 
@@ -141,8 +141,8 @@ export default function AnnouncementCard({
       </div>
 
       <h3 className="text-base font-semibold">{data.heading}</h3>
-      <p className="text-sm text-gray-700">{data.description}</p>
-      <div className="flex items-center gap-2 text-sm text-gray-500">
+      <p className="text-sm">{data.description}</p>
+      <div className="flex items-center gap-2 text-sm">
         <Avatar className="h-6 w-6">
           <AvatarFallback>
             {data.postedBy ? data.postedBy[0].toUpperCase() : "?"}

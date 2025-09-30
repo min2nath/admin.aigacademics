@@ -153,7 +153,7 @@ const onSubmit = async (data: LoginFormData) => {
 
           <div className="bg-muted relative hidden md:block">
             <Image
-              src="https://res.cloudinary.com/dr5kn8993/image/upload/v1750330038/AIG_Event_Software/login-signup/login_bdhrsz.png"
+              src="https://aig-academics.s3.ap-southeast-1.amazonaws.com/login_bdhrsz.png"
               alt="AIG Hospital"
               className="object-cover h-full w-full"
               width={500}

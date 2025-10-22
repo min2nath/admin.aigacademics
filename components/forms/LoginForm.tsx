@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import ReCAPTCHA from 'react-google-recaptcha'
+// import ReCAPTCHA from 'react-google-recaptcha'
 import { useAuthStore } from '@/stores/authStore'
 import { Eye, EyeOff } from 'lucide-react'
 
@@ -33,15 +33,15 @@ export function LoginForm() {
     resolver: zodResolver(loginSchema),
   })
 
-const recaptchaRef = useRef<ReCAPTCHA>(null)
+// const recaptchaRef = useRef<ReCAPTCHA>(null)
 const onSubmit = async (data: LoginFormData) => {
   setError("");
   setIsLoading(true);
-  if (!captchaToken) {
-      setError('Please complete the reCAPTCHA')
-      setIsLoading(false)
-      return
-    }
+  // if (!captchaToken) {
+  //     setError('Please complete the reCAPTCHA')
+  //     setIsLoading(false)
+  //     return
+  //   }
 
   try {
     const json = await api("/login", {
@@ -122,14 +122,14 @@ const onSubmit = async (data: LoginFormData) => {
               </div>
 
               {/* Google reCAPTCHA */}
-              <div>
+              {/* <div>
                 <ReCAPTCHA
                   sitekey={SITE_KEY}
                   ref={recaptchaRef}
                   onChange={(token) => setCaptchaToken(token)}
                   onExpired={() => setCaptchaToken(null)}
                 />
-              </div>
+              </div> */}
 
               {error && <p className="text-red-500 text-sm">{error}</p>}
 

@@ -38,6 +38,15 @@ export const currencyType = [
   { value: "USD", label: "USD" },
 ] as const;
 
+export const paymentGateway = [
+  { value: "RazorPay", label: "RazorPay" },
+  { value: "Paytm", label: "Paytm" },
+  { value: "InstaMojo", label: "InstaMojo" },
+  { value: "CashFree", label: "Cashfree" },
+  { value: "PayU", label: "PayU" },
+  { value: "CC-Avenue", label: "CC Avenue" },
+] as const;
+
 export const status = [
   { value: "Active", label: "Active" },
   { value: "Inactive", label: "Inactive" },

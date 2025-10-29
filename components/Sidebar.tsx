@@ -21,6 +21,7 @@ import {
   FaBullhorn,
   FaHome,
   FaCog,
+  FaMoneyCheck,
 } from "react-icons/fa";
 import clsx from "clsx";
 
@@ -41,6 +42,7 @@ const sidebarItems = [
   },
   { name: "Venue", href: "/venues", icon: <FaMapMarkerAlt size={20} /> },
   { name: "Announcement", href: "/announcements", icon: <FaBullhorn size={20} /> },
+  { name: "Payment Gateway", href: "/payment-gateway", icon: <FaMoneyCheck size={20} /> },
 ];
 
 function SidebarComponent() {

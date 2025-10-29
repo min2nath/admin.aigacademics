@@ -10,12 +10,10 @@ import {
   Map as MapIcon,
   Pencil,
   Trash2,
-  ExternalLink,
   Clock3,
   Ban,
   History,
   FileText,
-  CheckCircle,
   Users,
   Building2,
   Tag,
@@ -62,18 +60,10 @@ export default function EventCard({ event, onEdit }: EventCardProps) {
       color: 'bg-blue-100 text-blue-700',
       icon: <Clock3 className="h-5 w-5 mr-1" />,
     },
-    Cancelled: {
-      color: 'bg-red-100 text-red-700',
-      icon: <Ban className="h-5 w-5 mr-1" />,
-    },
     Past: {
       color: 'bg-orange-100 text-orange-700',
       icon: <History className="h-5 w-5 mr-1" />,
       label: 'Completed', // display "Completed" instead of Past
-    },
-    Draft: {
-      color: 'bg-orange-100 text-orange-700',
-      icon: <FileText className="h-5 w-5 mr-1" />,
     },
   }
 

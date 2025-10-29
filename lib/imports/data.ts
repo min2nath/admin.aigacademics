@@ -8,4 +8,5 @@ export {
   registrationType,
   currencyType,
   items,
+  paymentGateway
 } from "@/lib/constants"
